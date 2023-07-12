@@ -41,24 +41,27 @@ function Footer() {
     ]
 
     const element = members.map(e =>
-        <div className='members-item' key={e.memberName}>
-            <p className=''>{e.memberName}</p>
-            <div className='linksProfile-container'>
-                <a href={e.linkGithub} target='_blanck'><img className='w-25' src={imgGithub} alt={e.altGithubIcon} /></a>
-                <a href={e.linkLinkedin} target='_blanck'><img className='w-25' src={imgLinkedin} alt={e.altLinkedinIcon} /></a>
+        <div className='members-item my-2' key={e.memberName}>
+            <p className='mb-1 fw-medium'>{e.memberName}</p>
+            <div className='linksProfile-container mb-3 text-lg-center'>
+                <a href={e.linkGithub} className='me-1' target='_blanck'><img src={imgGithub} alt={e.altGithubIcon} /></a>
+                <a href={e.linkLinkedin} target='_blanck'><img src={imgLinkedin} alt={e.altLinkedinIcon} /></a>
             </div>
         </div>
     )
 
   return (
-    <div className='footer-container'>
-        {element} 
-        <div className=''>
-            <a href="#">Nosotros</a>
-            <a href="#">Contacto</a>
+    <footer className='footer-container px-4 px-lg-5 bg-dark text-white'>
+        <div className='d-flex flex-column align-items-start flex-lg-row align-items-lg-center  justify-content-lg-between'>
+            <div className='linksPage d-flex flex-column my-3 fw-medium'>
+                <a href="#" className='link-underline link-underline-opacity-0 my-1'>Inicio</a>
+                <a href="#" className='link-underline link-underline-opacity-0 my-1'>Nosotros</a>
+                <a href="#" className='link-underline link-underline-opacity-0 my-1'>Contacto</a>
+            </div>
+            {element} 
         </div>
-        <p className='text-center m-0 p-2'>&copy; Copyright Group 4 - 2023</p>
-    </div>
+        <p className='text-center p-2'>&copy; Copyright Group 4 - 2023</p>
+    </footer>
   )
 }
 

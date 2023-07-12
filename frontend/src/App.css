@@ -3,3 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+/* FOOTER */
+
+.linksProfile-container img {
+    width: 1.8rem;
+}
