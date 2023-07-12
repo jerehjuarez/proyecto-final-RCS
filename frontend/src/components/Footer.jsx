@@ -1,5 +1,6 @@
 import imgGithub from '../images/github-icon.svg';
 import imgLinkedin from '../images/linkedin-icon.svg';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
     const members = [
@@ -54,9 +55,9 @@ function Footer() {
     <footer className='footer-container px-4 px-lg-5 bg-dark text-white'>
         <div className='d-flex flex-column align-items-start flex-lg-row align-items-lg-center  justify-content-lg-between'>
             <div className='linksPage d-flex flex-column my-3 fw-medium'>
-                <a href="#" className='link-underline link-underline-opacity-0 my-1'>Inicio</a>
-                <a href="#" className='link-underline link-underline-opacity-0 my-1'>Nosotros</a>
-                <a href="#" className='link-underline link-underline-opacity-0 my-1'>Contacto</a>
+                <NavLink to="/" className='fw-medium my-2 link-underline link-underline-opacity-0'><i className="bi bi-house-door-fill"></i> Inicio</NavLink>
+                <NavLink to="/about" className='fw-medium my-2 link-underline link-underline-opacity-0'>Nosotros</NavLink>
+                <NavLink to="/contact" className='fw-medium my-2 link-underline link-underline-opacity-0'>Contacto</NavLink>
             </div>
             {element} 
         </div>
