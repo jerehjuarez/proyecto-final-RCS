@@ -12,3 +12,44 @@
 .linksProfile-container img {
     width: 1.8rem;
 }
+
+
+
+/* HOME */
+
+.content{
+  text-align: center;
+}
+
+.list{
+  margin-right: 20%;
+  margin-left:20%;
+}
+
+.text{
+  list-style-type: none;
+  text-align: left;
+  margin-top: 15px;
+  background-color: rgba(104, 104, 104, 0.155);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgba(125, 125, 125, 0.722);
+  padding: 10px;
+  font-size: 15px;
+}
+
+.delete{
+  position: relative;
+  bottom: 23px;
+  right: 23px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: white;
+}
+
+.delete:hover{
+  background-color: rgb(90, 255, 75);
+  color: black;
+  
+}
