@@ -8,6 +8,9 @@
   
 
 /* FOOTER */
+.footer-container {
+  background-color: #202020;
+}
 
 .linksProfile-container img {
     width: 1.8rem;

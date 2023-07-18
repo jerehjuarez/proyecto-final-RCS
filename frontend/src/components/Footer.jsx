@@ -52,12 +52,13 @@ function Footer() {
     )
 
   return (
-    <footer className='footer-container px-4 px-lg-5 bg-dark text-white'>
+    <footer className='footer-container px-4 px-lg-5 text-white'>
         <div className='d-flex flex-column align-items-start flex-lg-row align-items-lg-center  justify-content-lg-between'>
             <div className='linksPage d-flex flex-column my-3 fw-medium'>
                 <NavLink to="/" className='fw-medium my-2 link-underline link-underline-opacity-0'><i className="bi bi-house-door-fill"></i> Inicio</NavLink>
                 <NavLink to="/about" className='fw-medium my-2 link-underline link-underline-opacity-0'>Nosotros</NavLink>
                 <NavLink to="/contact" className='fw-medium my-2 link-underline link-underline-opacity-0'>Contacto</NavLink>
+                <NavLink to="/login" className='fw-medium my-2 link-underline link-underline-opacity-0'>Iniciar sesión</NavLink>
             </div>
             {element} 
         </div>
