@@ -11,22 +11,23 @@ function NavbarComponent() {
        {["lg"].map((expand) => (
         <Navbar key={expand} expand={expand} className="container">
           <Container fluid>
-          <NavLink to="/" className="link-underline link-underline-opacity-0">Logo</NavLink>
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+          <NavLink to="/"><img className="logo-app rounded-circle" src="../../img/logo-app.png" alt="logo de la app" /></NavLink>
+            <Navbar.Toggle className='bg-light' aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end">
-              <Offcanvas.Header closeButton>
+              <Offcanvas.Header className='navbar-toggle' closeButton>
                 <Offcanvas.Title className='ms-3 ms-lg-0' id={`offcanvasNavbarLabel-expand-${expand}`}>
-                <NavLink to="/" className="link-underline link-underline-opacity-0">Logo</NavLink>
+                <NavLink to="/"><img className="logo-app rounded-circle" src="../../img/logo-app.png" alt="logo de la app" /></NavLink>
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1">
-                    <NavLink to="/" className='fw-medium m-3 link-underline link-underline-opacity-0'><i className="bi bi-house-door-fill"></i> Inicio</NavLink>
-                    <NavLink to="/about" className='fw-medium m-3 link-underline link-underline-opacity-0'>Nosotros</NavLink>
-                    <NavLink to="/contact" className='fw-medium m-3 link-underline link-underline-opacity-0'>Contacto</NavLink>
+              <Offcanvas.Body className='navbar-toggle-links'>
+                <Nav className="justify-content-end flex-grow-1 align-items-center">
+                    <NavLink to="/" className=' link fw-medium m-3 p-2 link-underline link-underline-opacity-0 text-white'><i className="bi bi-house-door-fill"></i> Inicio</NavLink>
+                    <NavLink to="/about" className='fw-medium m-3 p-1 link-underline link-underline-opacity-0 text-white'>Nosotros</NavLink>
+                    <NavLink to="/contact" className='fw-medium m-3 p-1 link-underline link-underline-opacity-0 text-white'>Contacto</NavLink>
+                    <NavLink to="/login" className='fw-medium m-3 loging link-underline link-underline-opacity-0 text-white'>Iniciar sesión</NavLink>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

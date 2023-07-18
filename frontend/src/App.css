@@ -4,8 +4,29 @@
   box-sizing: border-box;
 }
 
+.app-container {
+  background-color: #222831;
+}
+
 /* NAVBAR */
-  
+
+.logo-app {
+  width: 3rem;
+}
+
+.navbar-toggle, .navbar-toggle-links {
+  background-color: #222831;
+}
+
+.navbar-toggle button {
+  background-color: rgb(233, 233, 233);
+}
+
+.loging {
+  background-color: #892CDC ;
+  padding: .5rem;
+  border-radius: .3rem;
+}
 
 /* FOOTER */
 .footer-container {
