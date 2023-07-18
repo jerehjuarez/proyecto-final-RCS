@@ -38,7 +38,7 @@ function Login() {
     }
 
     return (
-    <div className='d-flex justify-content-center align-items-center bg-secondary vh-100'>
+    <div className='d-flex justify-content-center align-items-center'>
         { loading ? (
           <div className='d-flex justify-content-center align-items-center'>
                 <Spinner animation="grow" variant='primary' className='m-2' />
@@ -46,23 +46,25 @@ function Login() {
                 <Spinner animation="grow" variant='primary' className='m-2' />
           </div>
         ) : (
-            <div className='bg-white p-3 rounded w-25'>
-            <h1>Iniciar sesión</h1>
-            <form onSubmit={handleSubmit} >
-                <div className='mb-3'>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" placeholder='Ingrese su email' autoComplete='off' name='email' className='form-control rounded-0'onChange={(e) => {setEmail(e.target.value), setErrorDate(""), setValidation("")}} />
-                </div>
-                <div className='mb-3'>
-                    <label htmlFor="email">Contraseña</label>
-                    <input type="password" placeholder='Ingrese su contraseña' autoComplete='off' name='email' className='form-control rounded-0' onChange={(e) => {setPassword(e.target.value), setErrorDate(""), setValidation("")}}/>
-                </div>
-                <button type='submit' className='btn btn-success border w-100'>Iniciar sesión</button>
-            </form>
-            {validation && <p className="text-danger">{ validation }</p>}
-            {errorDate && <p className="text-danger">{ errorDate }</p>}
-            <p>¿No tienes una cuenta?</p>
-            <Link to="/register" className='btn btn-default border w-100 bg-light'>Registrarme</Link>
+            <div className='form-container text-white'>
+                <h1 className='mb-4'>Iniciar sesión</h1>
+                <form onSubmit={handleSubmit} >
+                    <div className='mb-4'>
+                        <input type="email" placeholder='Ingrese su email' autoComplete='off' name='email' className='form-control rounded'onChange={(e) => {setEmail(e.target.value), setErrorDate(""), setValidation("")}} />
+                    </div>
+                    <div className='mb-4'>
+                        <input type="password" placeholder='Ingrese su contraseña' autoComplete='off' name='email' className='form-control rounded' onChange={(e) => {setPassword(e.target.value), setErrorDate(""), setValidation("")}}/>
+                    </div>
+                    {validation && <p className="text-white rounded text-center mb-3 p-2 bg-danger">{ validation }</p>}
+                    {errorDate && <p className="text-white rounded text-center mb-3 p-2 bg-danger">{ errorDate }</p>}
+                    <div className='text-center mt-2'>
+                        <button type='submit' className='loging text-white w-50'>Iniciar sesión</button>
+                    </div>
+                </form>
+            <p className='mb-0 mt-4 text-center'>¿No tienes una cuenta?</p>
+            <div className='text-center mt-3'>
+                <Link to="/register" className='loging text-white w-50'>Registrarme</Link>
+            </div>
         </div>
         )}
     </div>

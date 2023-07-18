@@ -26,27 +26,28 @@ function Signup() {
     }
 
   return (
-    <div className='d-flex justify-content-center align-items-center bg-secondary vh-100'>
-        <div className='bg-white p-3 rounded w-25'>
-            <h1>Registro</h1>
+    <div className='d-flex justify-content-center align-items-center'>
+        <div className='form-container text-white'>
+            <h1 className='mb-4'>Registro</h1>
             <form onSubmit={handleSubmit} >
-                <div className='mb-3'>
-                    <label htmlFor="email">Nombre</label>
-                    <input type="text" placeholder='Ingrese su nombre' autoComplete='off' name='email' className='form-control rounded-0' onChange={(e) => {setName(e.target.value), setValidation("")}} />
+                <div className='mb-4'>
+                    <input type="text" placeholder='Ingrese su nombre' autoComplete='off' name='email' className='form-control rounded' onChange={(e) => {setName(e.target.value), setValidation("")}} />
                 </div>
-                <div className='mb-3'>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" placeholder='Ingrese su email' autoComplete='off' name='email' className='form-control rounded-0'onChange={(e) => {setEmail(e.target.value), setValidation("")}} />
+                <div className='mb-4'>
+                    <input type="email" placeholder='Ingrese su email' autoComplete='off' name='email' className='form-control rounded'onChange={(e) => {setEmail(e.target.value), setValidation("")}} />
                 </div>
-                <div className='mb-3'>
-                    <label htmlFor="email">Contraseña</label>
-                    <input type="password" placeholder='Ingrese su contraseña' autoComplete='off' name='email' className='form-control rounded-0' onChange={(e) => {setPassword(e.target.value), setValidation("")}}/>
+                <div className='mb-4'>
+                    <input type="password" placeholder='Ingrese su contraseña' autoComplete='off' name='email' className='form-control rounded' onChange={(e) => {setPassword(e.target.value), setValidation("")}}/>
                 </div>
-                <button type='submit' className='btn btn-success border w-100'>Registrarme</button>
+            {validation && <p className="text-white rounded text-center mb-3 p-2 bg-danger">{ validation }</p>}
+                <div className='text-center mt-2'>
+                    <button type='submit' className='loging text-white w-50'>Registrarme</button>
+                </div>
             </form>
-            {validation && <p className="text-danger">{ validation }</p>}
-            <p>¿Ya tienes una cuenta?</p>
-            <Link to="/login" className='btn btn-default border w-100 bg-light'>Iniciar sesión</Link>
+            <p className='mb-0 mt-4 text-center'>¿Ya tienes una cuenta?</p>
+            <div className='text-center mt-3' >
+                <Link to="/login" className='loging text-white w-50'>Iniciar sesión</Link>
+            </div>
         </div>
     </div>
   )
