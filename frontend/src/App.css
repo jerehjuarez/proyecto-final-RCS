@@ -73,3 +73,81 @@
 .linksProfile-container img {
     width: 1.8rem;
 }
+
+
+/*CONTAC*/
+
+@media screen and (min-width: 320px) {
+  .contact-form{
+    padding: 2rem;
+    margin: 0 auto;
+    border: .1rem solid #892CDC;
+    border-radius: .3rem;
+    text-align: center;
+    
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .contact-form{
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form{
+    width: 50%;
+  }
+}
+
+
+@media screen and (min-width: 1300px) {
+  .contact-form{
+    width: 35%;
+  }
+}
+
+
+.contact-form div {
+  margin-bottom: 1rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 90%;
+  padding: 4px;
+  
+
+}
+
+
+
+.contact-form textarea {
+
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+  width: 90%;
+  padding: 5px;
+  border: .1rem solid #892CDC;
+  border-radius: .3rem;
+}
+
+.contact-form input {
+  /* background-color: white; */
+  width: 90%;
+  padding: 4px;
+}
+
+
+
+
+
+
+.contact-form button[type="submit"]{
+  padding: 10px 20px;
+  background-color: #892CDC;
+}
