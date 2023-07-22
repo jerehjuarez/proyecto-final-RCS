@@ -151,3 +151,46 @@
   padding: 10px 20px;
   background-color: #892CDC;
 }
+
+
+
+/* ERROR PAGE */
+/* Wave text loader made by: csozi | Website: english.csozi.hu*/
+
+.text {
+  /*color: black;*/
+  font-weight: bolder;
+}
+
+@keyframes letter {
+  0% {
+    font-size: 30px;
+  }
+
+  50% {
+    font-size: 40px;
+  }
+
+  100% {
+    font-size: 30px;
+  }
+}
+
+.letter {
+  animation: letter 1s infinite;
+}
+
+.letter1 {
+  animation-delay: 0s;
+}
+
+.letter2 {
+  animation-delay: -0.9s;
+}
+
+.letter3 {
+  animation-delay: -0.8s;
+}
+
+
+
