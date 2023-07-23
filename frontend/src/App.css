@@ -75,122 +75,42 @@
 }
 
 
-/*CONTAC*/
 
-@media screen and (min-width: 320px) {
-  .contact-form{
-    padding: 2rem;
-    margin: 0 auto;
-    border: .1rem solid #892CDC;
-    border-radius: .3rem;
-    text-align: center;
-    
-  }
+/* HOME */
+
+.content{
+  text-align: center;
 }
 
-
-@media screen and (min-width: 768px) {
-  .contact-form{
-    width: 70%;
-  }
+.list{
+  margin-right: 20%;
+  margin-left:20%;
 }
 
-@media screen and (min-width: 1200px) {
-  .contact-form{
-    width: 50%;
-  }
+.text{
+  list-style-type: none;
+  text-align: left;
+  margin-top: 15px;
+  background-color: rgba(104, 104, 104, 0.155);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgba(125, 125, 125, 0.722);
+  padding: 10px;
+  font-size: 15px;
 }
 
-
-@media screen and (min-width: 1300px) {
-  .contact-form{
-    width: 35%;
-  }
+.delete{
+  position: relative;
+  bottom: 23px;
+  right: 23px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: white;
 }
 
-
-.contact-form div {
-  margin-bottom: 1rem;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  width: 90%;
-  padding: 4px;
+.delete:hover{
+  background-color: rgb(90, 255, 75);
+  color: black;
   
-
 }
-
-
-
-.contact-form textarea {
-
-  min-height: 100px;
-  max-height: 200px;
-  max-width: 100%;
-  width: 90%;
-  padding: 5px;
-  border: .1rem solid #892CDC;
-  border-radius: .3rem;
-}
-
-.contact-form input {
-  /* background-color: white; */
-  width: 90%;
-  padding: 4px;
-}
-
-
-
-
-
-
-.contact-form button[type="submit"]{
-  padding: 10px 20px;
-  background-color: #892CDC;
-}
-
-
-
-/* ERROR PAGE */
-/* Wave text loader made by: csozi | Website: english.csozi.hu*/
-
-.text {
-  /*color: black;*/
-  font-weight: bolder;
-}
-
-@keyframes letter {
-  0% {
-    font-size: 30px;
-  }
-
-  50% {
-    font-size: 40px;
-  }
-
-  100% {
-    font-size: 30px;
-  }
-}
-
-.letter {
-  animation: letter 1s infinite;
-}
-
-.letter1 {
-  animation-delay: 0s;
-}
-
-.letter2 {
-  animation-delay: -0.9s;
-}
-
-.letter3 {
-  animation-delay: -0.8s;
-}
-
-
-
