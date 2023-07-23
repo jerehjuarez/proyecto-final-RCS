@@ -26,9 +26,10 @@ function Signup() {
     }
 
   return (
-    <div className='d-flex justify-content-center align-items-center'>
+    <div className='d-flex justify-content-center align-items-center vh-100'>
         <div className='form-container text-white'>
-            <h1 className='mb-4'>Registro</h1>
+            <Link to="/" className='link fw-medium loging link-underline link-underline-opacity-0 text-white'><i className="bi bi-house-door-fill"></i> Inicio</Link>
+            <h1 className='mb-4 mt-3'>Registro</h1>
             <form onSubmit={handleSubmit} >
                 <div className='mb-4'>
                     <input type="text" placeholder='Ingrese su nombre' autoComplete='off' name='email' className='form-control rounded' onChange={(e) => {setName(e.target.value), setValidation("")}} />
