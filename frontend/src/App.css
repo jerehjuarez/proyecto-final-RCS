@@ -5,7 +5,7 @@
 }
 
 .app-container {
-  background-color: #222831;
+  background-color: #010409;
 }
 
 /* NAVBAR */
@@ -15,7 +15,7 @@
 }
 
 .navbar-toggle, .navbar-toggle-links {
-  background-color: #222831;
+  background-color: #010409;
 }
 
 .navbar-toggle button {
@@ -23,21 +23,21 @@
 }
 
 .loging {
-  background-color: #892CDC ;
+  background: linear-gradient(to right, #00b4db, #0083b0);
   padding: .5rem;
   border: none;
   border-radius: .3rem;
   text-decoration: none;
 }
 
-/* REGISTRO */
+/* REGISTER */
 
 @media screen and (min-width: 320px) {
   .form-container{
     padding: 1.5rem;
     margin: 4rem 0rem;
     width: 90%;
-    border: .1rem solid #892CDC;
+    border: .1rem solid #0083b0;
     border-radius: .3rem;
   }
 }
@@ -63,7 +63,7 @@
 /* FOOTER */
 
 .footer-container {
-  background-color: #202020;
+  background-color: #1a1a1a;
 }
 
 .footer-container p {
@@ -76,7 +76,7 @@
 
 
 
-/* HOME */
+/* TO-DO LIST */
 
 .content{
   text-align: center;
