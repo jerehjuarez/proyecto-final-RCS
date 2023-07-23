@@ -29,59 +29,64 @@ const ContactForm = () => {
   };
 
   return (
-    <form className= "contact-form my-5"onSubmit={handleSubmit}>
-       <div>
-    <h1 className='text-center text-white'>Formulario de Contacto</h1>
-  </div>
-      <div>
-        <label className='contact-form label text-white' htmlFor="nombre">Nombres:</label>
-        <input className='contact-form input'
-          type="text"
-          id="nombre"
-          name="nombre"
-          value={formData.nombre}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label className='contact-form label text-white'htmlFor="apellido">Apellidos:</label>
-        <input className='contact-form input'
-          type="text"
-          id="apellido"
-          name="apellido"
-          value={formData.apellido}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label className='contact-form label text-white'htmlFor="email">Correo Electrónico:</label>
-        <input className='contact-form input'
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <div>
-        <label className='contact-form label text-white'htmlFor="mensaje">Mensaje:</label>
-        <textarea className= "contact-form textarea"
-          id="mensaje"
-          name="mensaje"
-          value={formData.mensaje}
-          onChange={handleChange}
-          required
-        />
-      </div>
-
-      <button className='contact-form button text-white' type="submit">Enviar</button>
-    </form>
+    <div className='container-form d-flex flex-column align-items-center justify-content-center'>
+      <form className="my-5 form"onSubmit={handleSubmit}>
+        <div>
+          <h1 className='text-center text-white mb-4'>Formulario de Contacto</h1>
+        </div>
+        <div>
+          <input className='input mb-3 p-2 rounded border-0'
+            type="text"
+            id="nombre"
+            name="nombre"
+            value={formData.nombre}
+            onChange={handleChange}
+            placeholder='Nombre'
+            required
+            autoComplete='off'
+          />
+        </div>
+        <div>
+          <input className='mb-3 p-2 rounded border-0'
+            type="text"
+            id="apellido"
+            name="apellido"
+            value={formData.apellido}
+            onChange={handleChange}
+            placeholder='Apellido'
+            required
+            autoComplete='off'
+          />
+        </div>
+        <div>
+          <input className='mb-3 p-2 rounded border-0'
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder='Correo electrónico'
+            required
+            autoComplete='off'
+          />
+        </div>
+        <div>
+          <textarea className="mb-3 p-2 rounded border-0"
+            id="mensaje"
+            name="mensaje"
+            value={formData.mensaje}
+            onChange={handleChange}
+            placeholder='Mensaje'
+            rows="5"
+            required
+            autoComplete='off'
+          />
+        </div>
+        <div className='text-center'>
+          <button className='contact-form loging text-white' type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
   );
 };
 
