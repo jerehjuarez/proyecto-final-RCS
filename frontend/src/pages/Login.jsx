@@ -40,10 +40,10 @@ function Login() {
     return (
     <div className='d-flex justify-content-center align-items-center'>
         { loading ? (
-          <div className='d-flex justify-content-center align-items-center'>
-                <Spinner animation="grow" variant='primary' className='m-2' />
-                <Spinner animation="grow" variant='primary' className='m-2' />
-                <Spinner animation="grow" variant='primary' className='m-2' />
+          <div className='d-flex justify-content-center align-items-center vh-100'>
+                <Spinner animation="grow" variant='info' className='m-2' />
+                <Spinner animation="grow" variant='info' className='m-2' />
+                <Spinner animation="grow" variant='info' className='m-2' />
           </div>
         ) : (
             <div className='form-container text-white'>
