@@ -24,7 +24,7 @@ function Login() {
         }
 
         axios.post("http://localhost:3000/login", { email, password })
-        .then( result => {console.log(result)
+        .then( result => {
             if (result.data === "Exitoso") {
                 setLoading(true)
                 setTimeout(() => {
@@ -38,16 +38,17 @@ function Login() {
     }
 
     return (
-    <div className='d-flex justify-content-center align-items-center'>
+    <div className='d-flex justify-content-center align-items-center vh-100'>
         { loading ? (
-          <div className='d-flex justify-content-center align-items-center'>
-                <Spinner animation="grow" variant='primary' className='m-2' />
-                <Spinner animation="grow" variant='primary' className='m-2' />
-                <Spinner animation="grow" variant='primary' className='m-2' />
+          <div className='d-flex justify-content-center align-items-center vh-100'>
+                <Spinner animation="grow" variant='info' className='m-2' />
+                <Spinner animation="grow" variant='info' className='m-2' />
+                <Spinner animation="grow" variant='info' className='m-2' />
           </div>
         ) : (
             <div className='form-container text-white'>
-                <h1 className='mb-4'>Iniciar sesión</h1>
+                <Link to="/" className='link fw-medium loging link-underline link-underline-opacity-0 text-white'><i className="bi bi-house-door-fill"></i> Inicio</Link>
+                <h1 className='mb-4 mt-3'>Iniciar sesión</h1>
                 <form onSubmit={handleSubmit} >
                     <div className='mb-4'>
                         <input type="email" placeholder='Ingrese su email' autoComplete='off' name='email' className='form-control rounded'onChange={(e) => {setEmail(e.target.value), setErrorDate(""), setValidation("")}} />

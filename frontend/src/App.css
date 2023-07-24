@@ -5,7 +5,7 @@
 }
 
 .app-container {
-  background-color: #222831;
+  background-color: #010409;
 }
 
 /* NAVBAR */
@@ -15,7 +15,7 @@
 }
 
 .navbar-toggle, .navbar-toggle-links {
-  background-color: #222831;
+  background-color: #010409;
 }
 
 .navbar-toggle button {
@@ -23,21 +23,101 @@
 }
 
 .loging {
-  background-color: #892CDC ;
+  background-color: #4A00E0;
   padding: .5rem;
   border: none;
   border-radius: .3rem;
   text-decoration: none;
 }
 
-/* REGISTRO */
+/* HOME */
+
+.section-intro h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  background-image: linear-gradient(to right, #DA22FF, #9733EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.features h2 {
+  font-weight: 800;
+  font-size: 2.3rem;
+  background-image: linear-gradient(to right, #DA22FF, #9733EE);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media screen and (min-width: 320px) {
+  .container-img1 img {
+    width: 95%;
+  }
+
+  .container-img2 img {
+    width: 80%;
+  }
+
+  .container-img3 img {
+    width: 80%;
+  }
+
+  .back-img-container {
+    background-image: url(./images/back-img.svg);
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-img2 img {
+    width: 60%;
+  }
+
+  .container-img3 img {
+    width: 60%;
+  }
+
+  .back-img-container {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-img1 img {
+    width: 60%;
+  }
+
+  .container-img2 img {
+    width: 75%;
+  }
+
+  .back-img-container {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .back-img-container {
+    height: 65vh;
+  }
+}
+
+.register-text {
+  color: #DA22FF;
+}
+
+/* REGISTER */
 
 @media screen and (min-width: 320px) {
   .form-container{
     padding: 1.5rem;
     margin: 4rem 0rem;
     width: 90%;
-    border: .1rem solid #892CDC;
+    border: .1rem solid #DA22FF;
     border-radius: .3rem;
   }
 }
@@ -60,10 +140,28 @@
   }
 }
 
+/*FORM CONTACT */
+
+.form {
+  margin: 1rem;
+  padding: 3rem;
+  border-radius: .3rem;
+  background: linear-gradient(#010409, #010409) padding-box,
+  linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+}
+
+.form input, form textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  background-color: #ececec;
+}
+
 /* FOOTER */
 
 .footer-container {
-  background-color: #202020;
+  background-color: #0f0f0f;
 }
 
 .footer-container p {
@@ -71,54 +169,45 @@
 }
 
 .linksProfile-container img {
-    width: 1.8rem;
+  width: 1.8rem;
 }
 
+/* TO-DO LIST */
 
-/*CONTAC*/
-
-@media screen and (min-width: 320px) {
-  .contact-form{
-    padding: 2rem;
-    margin: 0 auto;
-    border: .1rem solid #892CDC;
-    border-radius: .3rem;
-    text-align: center;
-    
-  }
+.content{
+  text-align: center;
 }
 
-
-@media screen and (min-width: 768px) {
-  .contact-form{
-    width: 70%;
-  }
+.list{
+  margin-right: 20%;
+  margin-left:20%;
 }
 
-@media screen and (min-width: 1200px) {
-  .contact-form{
-    width: 50%;
-  }
+.text{
+  list-style-type: none;
+  text-align: left;
+  margin-top: 15px;
+  background-color: rgba(104, 104, 104, 0.155);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgba(125, 125, 125, 0.722);
+  padding: 10px;
+  font-size: 15px;
 }
 
-
-@media screen and (min-width: 1300px) {
-  .contact-form{
-    width: 35%;
-  }
+.delete{
+  position: relative;
+  bottom: 23px;
+  right: 23px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  background-color: white;
 }
 
-
-.contact-form div {
-  margin-bottom: 1rem;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  width: 90%;
-  padding: 4px;
+.delete:hover{
+  background-color: rgb(90, 255, 75);
+  color: black;
   
 
 }
@@ -155,8 +244,12 @@
 
 
 /* ERROR PAGE */
+/* Wave text loader made by: csozi | Website: english.csozi.hu*/
 
-
+.text {
+  /*color: black;*/
+  font-weight: bolder;
+}
 
 @keyframes letter {
   0% {
@@ -187,6 +280,3 @@
 .letter3 {
   animation-delay: -0.8s;
 }
-
-
-
