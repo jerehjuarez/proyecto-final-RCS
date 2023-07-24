@@ -2,6 +2,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
 const UserModel = require("./models/User")
+const bcrypt = require("bcrypt")
 
 const app = express()
 app.use(express.json())
@@ -15,11 +16,13 @@ app.post("/login", (req, res) => {
     UserModel.findOne({ email: email })
     .then(user => {
         if (user) {
-            if (user.password === password && user.email === email) {
-                res.json("Exitoso")
-            } else {
-                res.json("Los datos no son correctos")
-            }
+            bcrypt.compare(password, user.password, (err, response) => {
+                if (response) {
+                    res.json("Exitoso")
+                } else {
+                    res.json("Los datos no son correctos")
+                }
+            }) 
         } else {
             res.json("No existe")
         }
@@ -27,9 +30,14 @@ app.post("/login", (req, res) => {
 }) 
 
 app.post("/register", (req, res) => {
-    UserModel.create(req.body)
-    .then(user => res.json(user))
-    .catch(err => res.json(err))
+    const { name, email, password } = req.body
+    bcrypt.hash(password, 10)
+    .then(hash => {
+        UserModel.create({name, email, password: hash})
+        .then(user => res.json(user))
+        .catch(err => res.json(err))
+    })
+    .catch(err => console.log(err.message))
 }) 
 
 app.listen(3000, ()  => {
