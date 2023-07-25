@@ -9,23 +9,29 @@ function Signup() {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const navigate = useNavigate()
-    const [validation, setValidation] = useState();
+    const [validation, setValidation] = useState()
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-
-        if (!email || !password) return setValidation('Por favor, complete todos los campos.')
-            
-        if (password.length < 10 ) return setValidation('La contraseña debe tener al menos 10 caracteres');
-
-        axios.post("http://localhost:3000/register", { name, email, password })
-        .then( result => {console.log(result)
+    
+        if (!email || !password) {
+            return setValidation('Por favor, complete todos los campos.')
+        }
+        
+        if (password.length < 10) {
+            return setValidation('La contraseña debe tener al menos 10 caracteres')
+        }
+    
+        try {
+            const result = await axios.post("http://localhost:3000/register", { name, email, password })
+            console.log(result)
             navigate("/login")
-        })
-        .catch(err => console.log(err))
+        } catch (err) {
+            console.log(err)
+        }
     }
-
-  return (
+    
+    return (
     <div className='d-flex justify-content-center align-items-center vh-100'>
         <div className='form-container text-white'>
             <Link to="/" className='link fw-medium loging link-underline link-underline-opacity-0 text-white'><i className="bi bi-house-door-fill"></i> Inicio</Link>
