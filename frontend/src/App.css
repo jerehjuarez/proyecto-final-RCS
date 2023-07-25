@@ -155,7 +155,6 @@
   width: 100%;
   resize: none;
   outline: none;
-  background-color: #ececec;
 }
 
 /* FOOTER */
@@ -212,42 +211,9 @@
 
 }
 
-
-
-.contact-form textarea {
-
-  min-height: 100px;
-  max-height: 200px;
-  max-width: 100%;
-  width: 90%;
-  padding: 5px;
-  border: .1rem solid #892CDC;
-  border-radius: .3rem;
-}
-
-.contact-form input {
-  /* background-color: white; */
-  width: 90%;
-  padding: 4px;
-}
-
-
-
-
-
-
-.contact-form button[type="submit"]{
-  padding: 10px 20px;
-  background-color: #892CDC;
-}
-
-
-
 /* ERROR PAGE */
-/* Wave text loader made by: csozi | Website: english.csozi.hu*/
 
 .text {
-  /*color: black;*/
   font-weight: bolder;
 }
 
@@ -284,7 +250,6 @@
 
 /*ABOUTUS*/
 
-
 .card {
   width: 300px;
   transition: all 0.2s;
@@ -299,10 +264,6 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.25);
   backdrop-filter: blur(10px);
   border-radius: 8px;
-}
-
-.card:hover {
-  transform: scale(1.04) rotate(1deg);
 }
 
 .circle {

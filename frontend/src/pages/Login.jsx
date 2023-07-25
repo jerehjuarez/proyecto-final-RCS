@@ -15,28 +15,30 @@ function Login() {
     const [validation, setValidation] = useState();
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-
+    
         if (!email || !password) {
-            setValidation('Por favor, complete todos los campos.');
-            return;
+            setValidation('Por favor, complete todos los campos.')
+            return
         }
-
-        axios.post("http://localhost:3000/login", { email, password })
-        .then( result => {
+    
+        try {
+            const result = await axios.post("http://localhost:3000/login", { email, password })
+    
             if (result.data === "Exitoso") {
                 setLoading(true)
                 setTimeout(() => {
                     navigate("/toDoList")
-                }, 1400) 
+                }, 1400)
             } else {
                 setErrorDate('Los datos no son correctos')
             }
-        })
-        .catch(err => console.log(err))
+        } catch (err) {
+            console.log(err)
+        }
     }
-
+    
     return (
     <div className='d-flex justify-content-center align-items-center vh-100'>
         { loading ? (
