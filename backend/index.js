@@ -66,7 +66,7 @@ app.get("/about-us", async (req, res) => {
       console.error("Error al obtener los datos:", error);
       res.status(500).json({ message: "Ha ocurrido un error al obtener los datos." });
     }
-  });
+});
 
 app.listen(3000, ()  => {
     console.log("Connection")
