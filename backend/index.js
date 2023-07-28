@@ -4,6 +4,7 @@ const cors = require("cors")
 const UserModel = require("./models/User")
 const bcrypt = require("bcrypt")
 const ContactModel = require("./models/ContactData")
+const path = require("path")
 
 const app = express()
 app.use(express.json())
@@ -67,6 +68,8 @@ app.get("/about-us", async (req, res) => {
       res.status(500).json({ message: "Ha ocurrido un error al obtener los datos." });
     }
 });
+
+app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 app.listen(3000, ()  => {
     console.log("Connection")
